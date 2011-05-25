@@ -1,0 +1,29 @@
+
+# This RCSS file is simply Ruby code pretending to be CSS, so you can use 
+# variables like the on below. These two lines will be ignored as comment.
+
+$greyish_color = '#E9E9E9'
+
+# We start our Ruby-CSS here. For the CSS properties
+
+body {                                           #=> body { font-fam... }
+  font_family 'Arial, Verdana, sans-serif'       #=>   font-family: Arial, V...
+  
+  header {                                       #=> body header { width: ... }
+    width '960px'
+    
+    nav           { float 'right' }              #=> body header nav { flo... }
+    s('h1.title') { font_size '12px' }           #=> body header nav h1.title {
+  }
+
+  id('posts') {                                  #=> body #posts { ... }
+    font_size '12px'                             #=>   font-size: 12px;
+    
+    c('post') { color $greyish_color }           #=> body #posts .post { ... }
+  }
+}
+
+a {                                              #=> a { ... }
+  text_decoration 'none'                         #=>    text-decoration: none;
+}
+
